@@ -7,17 +7,16 @@
 int main(void)
 {
 	int a, b;
-
-	for (a = 0; a <= 9; a++)
+	for (a = 0; a <=9; a++)
 	{
-		for (b = a; b <= 9; b++)
+		for (b = a + 1; b <= 9; b++)
 		{
-			putchar('0' + a);
+				putchar('0' + a);
 				putchar('0' + b);
-		if (a == 9 && b == 9)
-		continue;
-			putchar(',');
-			putchar(' ');
+			if(a == 8 && b == 9)
+			continue;
+				putchar(',');
+				putchar(' ');
 		}
 	}
 	putchar('\n');
