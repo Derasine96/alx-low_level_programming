@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * * main - a program that prints possible diff. combinations of three digits
- * *
+ * * main - A program that prints possible dif. combinations of three digits.
+ *
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -10,9 +10,9 @@ int main(void)
 
 	for (a = 0; a <= 7; a++)
 	{
-		for (b = 0; b <= 8; b++)
+		for (b = a + 1; b <= 8; b++)
 		{
-			for (c = 0; c <= 9; c++)
+			for (c = b + 1; c <= 9; c++)
 			{
 				putchar('0' + a);
 				putchar('0' + b);
