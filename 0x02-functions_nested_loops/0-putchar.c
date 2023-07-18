@@ -2,15 +2,8 @@
 /**
  * main - a program that prints _putchar, followed by a new line.
  *
- * Description - Create and call a function.
- *
- * c: The character to print
- *
  * Return: Always 0 (Success)
  */
-/*Create a function */
-int _putchar(char c);
-
 int main(void)
 {
 	_putchar('_');
