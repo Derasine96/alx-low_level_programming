@@ -5,21 +5,20 @@
  *
  * @n: integerto be checked
  *
- * Return: Aways 0 (Success)
+ * Return: Value of n
  */
 void print_to_98(int n)
 {
-	int i;
-
 	if (n >= 98)
 	{
-		for (i = n; i > 98; i--)
-			_putchar((i & 10) + '0');
+		while (n > 98)
+			printf("%d ", n--);
+		printf("%d\n", n);
 	}
 	else
 	{
-		for (i = n; i < 98; i++)
-			_putchar((i % 10) + '0');
-	_putchar('\n');
+		while (n < 98)
+			printf("%d ", n++);
+		printf("%d\n", n);
 	}
 }
