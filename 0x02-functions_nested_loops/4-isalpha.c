@@ -4,7 +4,7 @@
  *
  * @c: - character to be checked
  *
- * Return - 1 if c is a letter, 0 if otherwise
+ * Return: 1 if c is a letter, 0 if otherwise
  */
 int _isalpha(int c)
 {
