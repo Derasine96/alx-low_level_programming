@@ -1,1 +1,1 @@
-My first C programming project
+C - Debugging
