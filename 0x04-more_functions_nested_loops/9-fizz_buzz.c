@@ -17,6 +17,7 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%d ", f);
+
 		if (f != 100)
 			printf(" ");
 	}
