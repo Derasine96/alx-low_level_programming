@@ -6,14 +6,17 @@
  */
 char *leet(char *y)
 {
-	int b;
+	int b = 0;
 	char r[] = "AaEeOoTtLl";
+	char v[] = "4433007711";
+	int c;
 
-	while (r[b] != '\0')
+	while (y[b] != '\0')
 	{
-		for (b = 0; y[b] != '\0'; b++)
+		for (c = 0; r[c] != '\0'; c++)
 		{
-			r[0] = 4;
+			if (y[b] == r[c])
+				y[b] = v[c];
 		}
 		b++;
 	}
