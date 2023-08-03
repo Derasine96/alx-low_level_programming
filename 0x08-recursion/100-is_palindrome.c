@@ -19,10 +19,11 @@ int length(char *s)
  */
 int comp(char *s, int a, int z)
 {
+	if (a >= z)
+		return (1);
 	if (*(s + a) != *(s + z))
 		return (0);
-	comp(s, a + 1, z - 1);
-	return (1);
+	return (comp(s, a + 1, z - 1));
 }
 /**
  * is_palindrome - a function that returns a string is a palindrome
