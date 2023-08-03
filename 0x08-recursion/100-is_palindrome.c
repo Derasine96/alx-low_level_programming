@@ -7,7 +7,8 @@
 int length(char *s)
 {
 	if (*s != '\0')
-	return (1 + length(s + 1));
+		return (1 + length(s + 1));
+	return (0);
 }
 /**
  * comp - a function to compare strings
@@ -18,7 +19,7 @@ int length(char *s)
  */
 int comp(char *s, int a, int z)
 {
-	if (s[a] != s[z])
+	if (*(s + a) != *(s + z))
 		return (0);
 	comp(s, a + 1, z - 1);
 	return (1);
