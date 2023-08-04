@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 			if (argv[i][digit] < '0' || argv[i][digit] > '9')
 			{
 				printf("Error\n");
-				return 1;
+				return (1);
 			}
 		}
 	}
