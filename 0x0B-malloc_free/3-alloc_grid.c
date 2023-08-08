@@ -8,38 +8,29 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int i, j, **arr;
+	int **arr;
+	int i, j;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	arr = (int **)malloc(width * sizeof(int *));
+	arr = (int **)malloc(height * sizeof(int *));
 	if (arr == NULL)
 		return (NULL);
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		arr[i] = (int *)malloc(height * sizeof(int));
+		arr[i] = (int *)malloc (width * sizeof(int));
 		if (arr[i] == NULL)
-			return (NULL);
-		for (j = 0; j < height; j++)
 		{
-			arr[i][j] = 0;
+			for (; i >= 0; i--)
+				free(arr[i]);
+			free(arr);
+			return (NULL);
 		}
 	}
-	return (arr);
-}
-/**
- * free2dpointer - function to free malloc
- * @arr: pointer to be freed
- * @width: row to be freed
- * Return: Nothing
- */
-void free2dpointer(int **arr, int width)
-{
-	int i;
-
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		free(arr[i]);
+		for (j = 0; j < width; j++)
+			arr[i][j] = 0;
 	}
-	free(arr);
+	return (arr);
 }
