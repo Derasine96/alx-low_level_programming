@@ -37,7 +37,8 @@ int *_strlen(char *str)
 	}
 	return (length);
 }
-/** new_dog - a function that creates a new dog.
+/**
+ * new_dog - a function that creates a new dog.
  * @name: struct member
  * @age: struct member
  * @owner: struct member
@@ -49,11 +50,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	len1 = _strlen(name);
 	len2 = _strlen(owner);
-pup = malloc(sizeof(dog_t));
+	pup = malloc(sizeof(dog_t));
 
 if (pup == NULL)
 	return (NULL);
-pup->name = malloc(sizeof(char) * (len1 + 1));
+	pup->name = malloc(sizeof(char) * (len1 + 1));
 
 if (pup->name == NULL)
 {
@@ -71,5 +72,5 @@ if (pup->owner == NULL)
 _strcpy(pup->name, name);
 _strcpy(pup->owner, owner);
 pup->age = age;
-return(pup);
+return (pup);
 }
