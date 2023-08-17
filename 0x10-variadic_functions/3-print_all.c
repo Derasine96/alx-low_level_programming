@@ -49,7 +49,8 @@ void print_all(const char * const format, ...)
 		}
 		print_format(format[i], &args);
 		i++;
-		if (format[i] != '\0' && strchr("cifs", format[i]) != NULL)
+		if ((i > 0) && (format[i] == 'c' || format[i] == 'i'
+					|| format[i] == 'f' || format[i] == 's'))
 			printf(", ");
 	}
 	printf("\n");
