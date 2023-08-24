@@ -2,8 +2,9 @@
 #include <stdio.h>
 /**
  * print_list - a function that prints all the ele. of a list.
- * @h: represents the current node being processed.
- * @Return: the number of nodes
+ * @h: pointer to the list_t list to print
+ *
+ * Return: the number of nodes printed
  */
 size_t print_list(const list_t *h)
 {
