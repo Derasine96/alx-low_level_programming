@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <stdlib.h>
 /**
  * read_textfile - that reads a text file and prints it to the POSIX SO.
  * @filename: the name of the file to create
@@ -22,16 +23,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		}
 		return (0);
 	}
-	fd = open("filename", O_RDONLY);
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 	{
 		free(buffer);
 		return (0);
 	}
-	bytesRead = read(fd, buffer, sizeof(buffer));
+	bytesRead = read(fd, buffer, letters);
 	while (bytesRead > 0)
 	{
-		bytesWrite = write(STDOUT_FILENO, buffer, sizeof(buffer));
+		bytesWrite = write(STDOUT_FILENO, buffer, bytesRead);
 		if (bytesWrite != bytesRead)
 		{
 			close(fd);
