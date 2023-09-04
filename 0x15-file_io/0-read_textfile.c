@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <stdlib.h>
 /**
  * read_textfile - that reads a text file and prints it to the POSIX SO.
  * @filename: the name of the file to create
