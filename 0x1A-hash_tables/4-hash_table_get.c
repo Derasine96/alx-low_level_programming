@@ -10,12 +10,12 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int i;
 	hash_node_t *node;
 
-	i = hash_djb2((const unsigned char*)key) % ht->size;
+	i = hash_djb2((const unsigned char *)key) % ht->size;
 	node = ht->array[i];
 	while (node != NULL)
 	{
 		if (strcmp(node->key, key) == 0)
-			return node->value;
+			return (node->value);
 		node = node->next;
 	}
 	return (NULL);
