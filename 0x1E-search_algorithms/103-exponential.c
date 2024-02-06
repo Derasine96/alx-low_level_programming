@@ -10,6 +10,7 @@
 int binarySearch(int *array, size_t start, size_t end, int value)
 {
 	size_t mid, i;
+
 	while (start <= end)
 	{
 		printf("Searching in array: ");
@@ -23,13 +24,13 @@ int binarySearch(int *array, size_t start, size_t end, int value)
 		}
 		mid = start + (end - start) / 2;
 		if (array[mid] == value)
-			return mid;
+			return (mid);
 		if (array[mid] < value)
 			start = mid + 1;
 		else
 			end = mid - 1;
 	}
-	return -1;
+	return (-1);
 }
 
 /**
